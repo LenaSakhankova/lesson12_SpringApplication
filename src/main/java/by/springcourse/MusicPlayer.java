@@ -9,7 +9,7 @@ import java.util.Random;
 
 import static by.springcourse.GenreOfMusic.CLASSICAL;
 
-@Component
+
 public class MusicPlayer {
     @Value("${musicPlayer.name}")
     private String name;
@@ -27,8 +27,7 @@ public class MusicPlayer {
     private Music music1;
     private Music music2;
 
-    @Autowired
-    public MusicPlayer(@Qualifier("classicalMusic") Music music1, @Qualifier("popMusic") Music music2)
+    @Autowired public MusicPlayer(@Qualifier("classicalMusic") Music music1, @Qualifier("popMusic") Music music2)
     {
 this.music2 = music2;
 this.music1 = music1;
